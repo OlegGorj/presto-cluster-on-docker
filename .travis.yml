@@ -13,8 +13,8 @@ services:
 
 before_install:
   - docker info
-#  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-#  - git submodule update --init
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - git submodule update --init
 
 install:
   - mkdir presto; cd presto
