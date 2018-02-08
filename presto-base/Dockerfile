@@ -2,8 +2,7 @@
 # This docker image is for launching test purpose presto cluster.
 #
 
-FROM ubuntu:14.04
-MAINTAINER lewuathe
+FROM ubuntu:16.04
 
 ENV PRESTO_VERSION=0.192-SNAPSHOT
 ENV PRESTO_HOME=/usr/local/presto
