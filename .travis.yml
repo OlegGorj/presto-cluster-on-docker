@@ -12,6 +12,8 @@ services:
   - docker
 
 before_install:
+  - sudo apt-get install maven
+  - mvn -version
   - docker info
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   - git submodule update --init
