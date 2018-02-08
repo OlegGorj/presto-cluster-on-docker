@@ -1,4 +1,4 @@
-FROM lewuathe/presto-base:latest
+FROM oleggorj/presto-base:latest
 MAINTAINER lewuathe
 
 COPY etc /usr/local/presto/etc
