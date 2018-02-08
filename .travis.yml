@@ -20,7 +20,7 @@ before_install:
 
 install:
   - mkdir presto; cd presto
-  - ./mvnw install -DskipTests $MAVEN_SKIP_CHECKS_AND_DOCS -B -q -T C1 -pl presto-server
+  - mvnw install -DskipTests $MAVEN_SKIP_CHECKS_AND_DOCS -B -q -T C1 -pl presto-server
   - cp presto-server/target/presto-server-0.192-SNAPSHOT.tar.gz ../presto-base
 
 script:
