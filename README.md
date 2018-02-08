@@ -1,4 +1,6 @@
-# docker-presto-cluster [![Build Status](https://travis-ci.org/Oleggorj/presto-cluster-on-docker.svg?branch=master)](https://travis-ci.org/Oleggorj/presto-cluster-on-docker)
+# docker-presto-cluster 
+
+[![Build Status](https://travis-ci.org/Oleggorj/presto-cluster-on-docker.svg?branch=master)](https://travis-ci.org/Oleggorj/presto-cluster-on-docker)
 
 presto-cluster-on-docker is a simple tool for launching multiple node [Presto](https://prestodb.io/) cluster on docker container.
 
