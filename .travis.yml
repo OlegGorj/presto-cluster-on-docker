@@ -14,6 +14,7 @@ services:
 before_install:
   - sudo apt-get install maven
   - mvn -version
+  - mvn -N io.takari:maven:wrapper
   - docker info
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   - git submodule update --init
