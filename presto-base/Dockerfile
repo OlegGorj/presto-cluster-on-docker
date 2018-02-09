@@ -30,5 +30,7 @@ RUN wget https://repo1.maven.org/maven2/com/facebook/presto/presto-server/${PRES
 RUN ln -s /usr/local/presto-server-${PRESTO_VERSION} $PRESTO_HOME
 
 # Create data dir
-RUN mkdir -p $PRESTO_HOME/data
+#RUN mkdir -p $PRESTO_HOME/data 
+RUN [[ -d $PRESTO_HOME/data ]] || mkdir $PRESTO_HOME/data
 VOLUME ["$PRESTO_HOME/etc", "$PRESTO_HOME/data"]
+
