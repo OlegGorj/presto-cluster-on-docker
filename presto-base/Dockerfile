@@ -8,6 +8,7 @@ ENV PRESTO_VERSION=0.194-SNAPSHOT
 ENV PRESTO_HOME=/usr/local/presto
 #ENV BASE_URL=https://repo1.maven.org/maven2/com/facebook/presto
 ENV BASE_URL=https://repo1.maven.org/maven2/com/facebook/presto
+https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.194/presto-server-0.194.tar.gz
 
 # install dev tools
 RUN apt-get update
@@ -26,7 +27,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
 
 WORKDIR /usr/local
 #ADD presto-server-${PRESTO_VERSION}.tar.gz /usr/local
-RUN wget ${BASE_URL}/presto-server/${PRESTO_VERSION}/presto-server-${PRESTO_VERSION}.tar.gz
+RUN wget https://repo1.maven.org/maven2/com/facebook/presto/presto-server/${PRESTO_VERSION}/presto-server-${PRESTO_VERSION}.tar.gz
 RUN ln -s /usr/local/presto-server-${PRESTO_VERSION} $PRESTO_HOME
 
 # Create data dir
