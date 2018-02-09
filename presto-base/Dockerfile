@@ -8,7 +8,6 @@ ENV PRESTO_VERSION=0.194-SNAPSHOT
 ENV PRESTO_HOME=/usr/local/presto
 #ENV BASE_URL=https://repo1.maven.org/maven2/com/facebook/presto
 ENV BASE_URL=https://repo1.maven.org/maven2/com/facebook/presto
-https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.194/presto-server-0.194.tar.gz
 
 # install dev tools
 RUN apt-get update
