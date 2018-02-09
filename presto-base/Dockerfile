@@ -4,7 +4,7 @@
 
 FROM ubuntu:16.04
 
-ENV PRESTO_VERSION=0.194-SNAPSHOT
+ENV PRESTO_VERSION=0.194
 ENV PRESTO_HOME=/usr/local/presto
 #ENV BASE_URL=https://repo1.maven.org/maven2/com/facebook/presto
 ENV BASE_URL=https://repo1.maven.org/maven2/com/facebook/presto
