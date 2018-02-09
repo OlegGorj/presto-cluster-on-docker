@@ -31,7 +31,8 @@ RUN ln -s /usr/local/presto-server-${PRESTO_VERSION} $PRESTO_HOME
 
 # Create data dir
 #RUN mkdir -p $PRESTO_HOME/data 
-RUN ls -l /usr/local/
-RUN [[ -d $PRESTO_HOME/data ]] || mkdir -p $PRESTO_HOME/data 2>/dev/null
+RUN ls -l /usr/local/presto
+#RUN [[ -d $PRESTO_HOME/data ]] || mkdir -p $PRESTO_HOME/data 2>/dev/null
+RUN mkdir -p $PRESTO_HOME/data 2>/dev/null
 VOLUME ["$PRESTO_HOME/etc", "$PRESTO_HOME/data"]
 
