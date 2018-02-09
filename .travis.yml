@@ -23,11 +23,11 @@ install:
   - cd presto
 #  - ./mvnw install -DskipTests=true $MAVEN_SKIP_CHECKS_AND_DOCS -B -q -T C1 -pl presto-server
 #  - ./mvnw install $MAVEN_FAST_INSTALL -pl presto-server
-  - make release
+  - wget https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.194/presto-server-0.194.tar.gz
   - pwd
-  - ls -la presto-server
   - ls -la ..
-  - cp presto-server/target/presto-server-0.192-SNAPSHOT.tar.gz ../presto-base
+#  - cp presto-server/target/presto-server-0.192-SNAPSHOT.tar.gz ../presto-base
+  - cp presto-server-0.194.tar.gz ../presto-base
 
 script:
   - cd ..
