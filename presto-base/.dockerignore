@@ -1,0 +1,4 @@
+# items to exclude from deployment
+!README*.md
+
+
