@@ -1,12 +1,10 @@
 #
 # This docker image is for launching test purpose presto cluster.
 #
-
 FROM ubuntu:16.04
 
 ENV PRESTO_VERSION=0.194
 ENV PRESTO_HOME=/usr/local/presto
-#ENV BASE_URL=https://repo1.maven.org/maven2/com/facebook/presto
 ENV BASE_URL=https://repo1.maven.org/maven2/com/facebook/presto
 
 # install dev tools
@@ -27,12 +25,14 @@ ENV PATH $PATH:$JAVA_HOME/bin
 WORKDIR /usr/local
 #ADD presto-server-${PRESTO_VERSION}.tar.gz /usr/local
 RUN wget https://repo1.maven.org/maven2/com/facebook/presto/presto-server/${PRESTO_VERSION}/presto-server-${PRESTO_VERSION}.tar.gz
+RUN ls -la /usr/local/
+RUN tar -xvzkf presto-server-${PRESTO_VERSION}.tar.gz
+RUN ls -la /usr/local/
 RUN ln -s /usr/local/presto-server-${PRESTO_VERSION} $PRESTO_HOME
+RUN ls -la /usr/local/
 
 # Create data dir
-#RUN mkdir -p $PRESTO_HOME/data 
 RUN ls -l /usr/local/presto
-#RUN [[ -d $PRESTO_HOME/data ]] || mkdir -p $PRESTO_HOME/data 2>/dev/null
-RUN mkdir $PRESTO_HOME/data
+RUN mkdir -p $PRESTO_HOME/data
 VOLUME ["$PRESTO_HOME/etc", "$PRESTO_HOME/data"]
 
