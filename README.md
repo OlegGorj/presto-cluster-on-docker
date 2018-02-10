@@ -1,12 +1,12 @@
 # presto-cluster-on-docker
 
-[![Build Status](https://travis-ci.org/Oleggorj/presto-cluster-on-docker.svg?branch=master)](https://travis-ci.org/Oleggorj/presto-cluster-on-docker)
+[![Build Status](https://travis-ci.org/OlegGorj/presto-cluster-on-docker.svg?branch=master)](https://travis-ci.org/OlegGorj/presto-cluster-on-docker)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?branch=master)](https://travis-ci.org/OlegGorj/presto-cluster-on-docker)
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://dockerbuildbadges.quelltext.eu/status.svg?organization=oleggorj&repository=presto-cluster-on-docker)
 
-presto-cluster-on-docker is a simple tool for launching multiple node [Presto](https://prestodb.io/) cluster on docker container.
+### presto-cluster-on-docker is a took for launching multiple node [Presto](https://prestodb.io/) cluster on docker container.
 
-The image is synched with the master branch of [presto repository](https://github.com/prestodb/presto). Therefore you can try the latest presto for developing purpose easily.
+The image is synched with the version `0.194` master branch of [presto repository](https://github.com/prestodb/presto). Therefore you can try the `0.194` presto for developing purpose easily.
 
 
 ## Build image
